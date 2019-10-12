@@ -26,7 +26,7 @@ ROBOTSTXT_OBEY = False
 设置好了后，在settings.py里面开启中间件
 
 
-##设置item
+###设置item
 
 ```
 class SougouwxItem(scrapy.Item):
@@ -38,12 +38,12 @@ class SougouwxItem(scrapy.Item):
     content_url = scrapy.Field()  # 文章内容
 ```
 
-##写spider程序
+###写spider程序
 
-##存储到mongodb
+###存储到mongodb
 
 
-##疑难点
+###疑难点
 
 1、每次访问要用不同的IP，不然会被禁止访问
 2、不能访问文章的外链，一点击就会出现anitspider页面
