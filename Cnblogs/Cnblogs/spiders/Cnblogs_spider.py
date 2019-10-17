@@ -25,7 +25,7 @@ class CnblogsSpiderSpider(scrapy.Spider):
             item['author'] = div.xpath(
                 "./div[@class='post_item_body']/div[@class='post_item_foot']/a/text()").extract_first()
             item['pub_date'] = ".".join(
-                div.xpath("./div[@class='post_item_body']/div[@class='post_item_foot']/text()").re("发布于 (.*?) "))
+                div.xpath("./div[@class='post_item_body']/div[@class='post_item_foot']/text()").re("发布于 (.*?)\s(.*?)\s"))
             yield item
 
         next_word = response.xpath("//div[@id='paging_block']/div[@class='pager']/a[last()]/text()").get()
